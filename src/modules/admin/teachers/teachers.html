@@ -1,0 +1,37 @@
+<div class="form_wrapper">
+    <div class="form_container">
+      <div class="title_container">
+        <h2>Teacher Registration Form</h2>
+        <a href="/teachers.scss"></a>
+      </div>
+      <div class="row clearfix">
+        <div class="">
+          <form>
+            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+              <input type="email" name="email"  ng-model="user.email" placeholder="Email" required />
+            </div>
+            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+              <input type="password" name="password" ng-model="user.password" placeholder="Password" required />
+            </div>
+           
+            <div class="row clearfix">
+              <div class="col_half">
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                  <input type="text" name="name" ng-model="user.name"  placeholder="Teacher Name" />
+                </div>
+              </div>
+             
+              </div>
+              <div class="col_half">
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                  <input type="number" name="phone" ng-model="user.phoneno"  placeholder="Phone Number" required />
+                </div>
+              </div>
+            </div>
+                 
+            <button class="btn btn-lg btn-primary btn-block btn-signin" ng-click="teachers.addTeacher(user)">Sign In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> 

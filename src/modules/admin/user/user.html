@@ -1,0 +1,21 @@
+<div class="container">
+	<h1><i class="fa fa-users"></i>&nbsp;Users</h1>
+	<table class="table table-bordered">
+		<thead class="thead-dark">
+			<th>Name</th>
+			<th>Username</th>
+			<th>Email</th>
+			<th>Website</th>
+			<th>Company</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="u in user.users">
+				<td>{{u.name}}</td>
+				<td>{{u.username}}</td>
+				<td><a href="mailto:{{user.email}}">{{u.email}}</a></td>
+				<td>{{u.website}}</td>
+				<td>{{u.company.name}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

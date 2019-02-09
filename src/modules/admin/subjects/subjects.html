@@ -1,0 +1,39 @@
+<div class="container">
+    <h1 id="com">ADD SUBJECT</h1>
+    <br/>
+    <div class="form-group">
+        <form>
+            <textarea class="form-control" rows="5" ng-model="subject.subName" placeholder="Subject"></textarea>
+        <br/>
+        <button class="btn btn-success btn-md pull-right" ng-click="subjects.addsub(subject)">Add Subject</button>
+        <br/>
+        <hr/>
+    </form>
+</div>
+</div>
+
+
+<div style="margin:1%;">  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        
+        <th class="text-center" scope="col">subject id</th>
+        <th class="text-center" scope="col">subject name</th>
+        <th class="text-center" scope="col">class </th>
+        
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <tr *ngFor="let x of values">
+        <td>{{x.sid}}</td>
+        <td>{{x.sname}}</td>
+        <td>{{x.cmap}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+

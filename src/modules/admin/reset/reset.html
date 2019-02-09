@@ -1,0 +1,43 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-md-12">
+			<div class="card card-container">
+				<img id="profile-img" class="profile-img-card" ng-src="assets/avatar_2x.png" />
+				<p id="profile-name" class="profile-name-card"></p>
+					<form name="userForm"  novalidate>
+						<!--Email-->
+						<div class="form-group" ng-class="{ 'has-error' : userForm.user.$invalid && (userForm.user.$dirty || submitted)}">
+							<label>Enter Registered Email</label>
+							<input type="text" name="user" class="form-control" ng-model="user.email" placeholder="Your Email Address" ng-required="true">
+							<p ng-show="userForm.email.$error.required && (userForm.email.$dirty || submitted)" class="help-block">Email is required.</p>
+							<!-- <p ng-show="userForm.email.$error.email && (userForm.email.$dirty || submitted)" class="help-block">Enter a valid email.</p> -->
+							</div>
+						
+						<!-- PASSWORD -->
+								<div class="form-group" ng-class="{ 'has-error' : userForm.password.$invalid && (userForm.password.$dirty || submitted)}">
+								<label>Current Password</label>
+								<input type="Password" name="password" class="form-control" ng-model="user.currpassword" placeholder="Your Password" ng-required="true">
+								<p ng-show="userForm.password.$error.required && (userForm.password.$dirty || submitted)" class="help-block">Your password is required.</p>
+                                </div>
+                                
+                                <div class="form-group" ng-class="{ 'has-error' : userForm.password.$invalid && (userForm.password.$dirty || submitted)}">
+                                    <label>New Password</label>
+                                    <input type="Password" name="password" class="form-control" ng-model="user.newpassword" placeholder="Your Password" ng-required="true">
+                                    <p ng-show="userForm.password.$error.required && (userForm.password.$dirty || submitted)" class="help-block">Your password is required.</p>
+                                    </div>
+                        </form>
+
+                        <div id="remember" class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block btn-signin" ng-click="reset.changePasswd(user)">Submit</button>
+                    </form><!-- /form -->
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
